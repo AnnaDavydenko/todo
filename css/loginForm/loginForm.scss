@@ -1,0 +1,200 @@
+@import "nullstyle.scss";
+
+body {
+   background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+}
+
+section {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+   padding: 10px;
+   font-size: 20px;
+   font-family: Raleway;
+   color: #3e403f;
+
+   h1 {
+      padding: 10px;
+      text-align: center;
+      margin: 15px 0;
+      font-size: 250%;
+      color: #3e403f;
+      letter-spacing: 0.06em;
+   }
+
+   .loginContainer {
+      background-image: linear-gradient(-360deg, #e3fdf5 10%, #ffe6fa66 40%);
+      width: 45%;
+      border: 2px solid #e3fdf5;
+      border-radius: 15px;
+      box-shadow: inset 2px -1px 9px 4px #e9fdf9;
+      padding: 21px;
+
+      .hidden {
+         visibility: hidden;
+      }
+      .errorField {
+         border: 2px solid #e4878729;
+         border-radius: 5px;
+         width: 100%;
+         margin: 5px 0 20px 0;
+         height: 45px;
+         padding: 0 15px;
+         font-size: 16px;
+
+         p {
+            display: flex;
+            color: #ca8585;
+            width: calc(100% - 24px);
+            height: 40px;
+            font-size: 16px;
+            text-align: center;
+            align-items: center;
+         }
+
+         .iconCloseContainer {
+            height: 24px;
+            width: 24px;
+            margin: 8px 0;
+            float: right;
+            background-color: transparent;
+         }
+      }
+
+      fieldset {
+         label {
+            display: block;
+            width: 100%;
+            font-size: 13px;
+            padding: 5px 0;
+         }
+
+         input[type="password"] {
+            width: calc(100% - 24px);
+            height: 40px;
+            font-size: 16px;
+            background-color: #edefee;
+         }
+
+         input[type="email"],
+         select,
+         .iconInput {
+            border: 2px solid #dedde2;
+            border-radius: 5px;
+            box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
+            width: 100%;
+            margin: 5px 0 20px 0;
+            height: 45px;
+            padding: 0 15px 0 30px;
+            font-size: 16px;
+            background-color: #edefee;
+         }
+
+         input[type="text"] {
+            font-size: 16px;
+            padding: 10px 0;
+            background-color: transparent;
+            font-family: Raleway;
+            letter-spacing: 0.06em;
+            color: #3e403f;
+         }
+
+         select {
+            background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat
+               right #edefee;
+            -webkit-appearance: none;
+            background-position-x: 96%;
+         }
+
+         select {
+            option {
+               height: 45px;
+            }
+         }
+
+         input[type="email"]:hover,
+         .iconInput:hover {
+            border: 2px solid #dedde2;
+            box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25), 1px 1px 4px rgba(0, 0, 0, 0.22);
+         }
+
+         .passwordIconLeft:before {
+            content: "";
+            background-image: url(https://upload-icon.s3.us-east-2.amazonaws.com/uploads/icons/png/9045692501580359479-64.png);
+            background-size: 21px 21px;
+            width: 27px;
+            height: 22px;
+            background-repeat: no-repeat;
+            position: absolute;
+            margin-left: 6px;
+            margin-top: 16px;
+         }
+
+         .emailIconLeft:before {
+            content: "\2709";
+            position: absolute;
+            margin-left: 0px;
+            margin-top: 14px;
+            padding: 4px;
+         }
+
+         .iconContainer {
+            height: 24px;
+            width: 24px;
+            margin: 8px 0;
+            float: right;
+            background-color: #edefee;
+         }
+      }
+
+      .buttons {
+         display: flex;
+         justify-content: space-evenly;
+
+         button {
+            font-size: 20px;
+            border: 2px solid #dedde2;
+            border-radius: 5px;
+            margin: 0 auto;
+            width: 100px;
+            cursor: pointer;
+            opacity: 0.9;
+            padding: 5px;
+            letter-spacing: 0.06em;
+         }
+      }
+
+      .buttons button:hover {
+         box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25), 1px 1px 4px rgba(0, 0, 0, 0.22);
+         border: 2px solid rgba(0, 0, 0, 0.25);
+         transform: translatey(3px);
+         animation: ani9 0.4s ease-in-out infinite alternate;
+      }
+
+      @keyframes ani9 {
+         0% {
+            transform: translateY(3px);
+         }
+
+         100% {
+            transform: translateY(5px);
+         }
+      }
+   }
+
+   @media (max-width: 760px) {
+      .loginContainer {
+         width: 75%;
+      }
+   }
+
+   @media (max-width: 640px) {
+      .loginContainer {
+         width: 90%;
+      }
+   }
+}

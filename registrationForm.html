@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Registration Form</title>
+   <link rel="stylesheet" href="css/loginForm/loginForm.css">
+   <link rel="stylesheet" href="css/fonts.css">
+</head>
+
+<body>
+   <section>
+      <h1>Registration</h1>
+      <div id="registrationForm" class="loginContainer">
+
+         <div class="errorField hidden">
+            <button class="iconCloseContainer" onclick="hideErrorMassage()">
+               <img src="images/icons/сlose.svg" alt="close icon">
+            </button>
+            <p>Invalid credentials provided or user does not exist</p>
+
+         </div>
+
+         <fieldset>
+            <label for="email">Email</label>
+            <i class="emailIconLeft"></i>
+            <input class="field" id="email" type="email" placeholder="E-mail" name="email" value="" required>
+         </fieldset>
+
+         <fieldset>
+            <label for="password">Password</label>
+            <i class="passwordIconLeft"></i>
+            <div class="iconInput">
+               <input class="field" id="password" type="password" placeholder="Password" name="password" value="" required>
+               <button class="iconContainer" onclick="showPassword('#password')"> <img src="images/icons/eye.svg"
+                     alt="show password"> </button>
+            </div>
+         </fieldset>
+
+         <fieldset>
+            <label for="confirmPassword">Confirm password</label>
+            <i class="passwordIconLeft"></i>
+            <div class="iconInput">
+               <input class="field" id="confirmPassword" type="password" placeholder="Confirm your password" name="confirmPassword"
+                  value="" required>
+               <button class="iconContainer" onclick="showPassword('#confirmPassword')"> <img src="images/icons/eye.svg"
+                     alt="show password"> </button>
+            </div>
+         </fieldset>
+
+         <fieldset>
+            <label for="userRole">User Role</label>
+
+            <select class="field" id="userRole" name="userRole">
+               <option value="admin">Admin</option>
+               <option value="user">User</option>
+            </select>
+         </fieldset>
+         <div class="buttons">
+            <button onclick="submitRegistrarion()">Submit</button>
+         </div>
+      </div>
+
+
+
+
+
+   </section>
+
+
+
+   <script src="js/form.js"></script>
+   <script src="js/login.js"></script>
+   <script src="js/validation.js"></script>
+
+
+</body>
+
+</html>

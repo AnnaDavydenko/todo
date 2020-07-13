@@ -37,6 +37,9 @@ function submitRegistrarion() {
    if (!isEmailValid || !isPasswordValid) {
       showErrorMassage();
    } else {
+      let user = new User(userData); // {id:123, password:123}
+      let userService = new UserService();
+      userService.create(user);
       window.location.href = window.location.origin + '/loginForm.html';
    }
 }
@@ -45,7 +48,7 @@ function register() {
    window.location.href = window.location.origin + '/registrationForm.html';
 }
 
-function submitLogin(){
+function submitLogin() {
    const userData = getFormFields("#loginForm");
    const isEmailValid = validateEmail(userData.email);
    const isPasswordValid = passwordMatchRegularExpression(userData.password);

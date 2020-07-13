@@ -37,12 +37,12 @@ function submitRegistrarion() {
    if (!isEmailValid || !isPasswordValid) {
       showErrorMassage();
    } else {
-      window.location.href = window.location.origin + '/todo/loginForm.html';
+      window.location.href = window.location.origin + '/loginForm.html';
    }
 }
 
 function register() {
-   window.location.href = window.location.origin + '/todo/registrationForm.html';
+   window.location.href = window.location.origin + '/registrationForm.html';
 }
 
 function submitLogin(){

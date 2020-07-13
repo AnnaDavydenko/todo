@@ -23,6 +23,22 @@
          </div>
 
          <fieldset>
+            <label for="name">Name</label>
+            <i class="nameSurnameIconLeft"></i>
+            <div class="iconInput">
+               <input class="field" id="name" type="text" placeholder="Your name" name="name" value="" required>
+            </div>
+         </fieldset>
+
+         <fieldset>
+            <label for="surname">Surname</label>
+            <i class="nameSurnameIconLeft"></i>
+            <div class="iconInput">
+            <input class="field" id="surname" type="text" placeholder="Your surname" name="surname" value="" required>
+            </div>
+         </fieldset>
+
+         <fieldset>
             <label for="email">Email</label>
             <i class="emailIconLeft"></i>
             <input class="field" id="email" type="email" placeholder="E-mail" name="email" value="" required>
@@ -32,7 +48,8 @@
             <label for="password">Password</label>
             <i class="passwordIconLeft"></i>
             <div class="iconInput">
-               <input class="field" id="password" type="password" placeholder="Password" name="password" value="" required>
+               <input class="field" id="password" type="password" placeholder="Password" name="password" value=""
+                  required>
                <button class="iconContainer" onclick="showPassword('#password')"> <img src="images/icons/eye.svg"
                      alt="show password"> </button>
             </div>
@@ -42,8 +59,8 @@
             <label for="confirmPassword">Confirm password</label>
             <i class="passwordIconLeft"></i>
             <div class="iconInput">
-               <input class="field" id="confirmPassword" type="password" placeholder="Confirm your password" name="confirmPassword"
-                  value="" required>
+               <input class="field" id="confirmPassword" type="password" placeholder="Confirm your password"
+                  name="confirmPassword" value="" required>
                <button class="iconContainer" onclick="showPassword('#confirmPassword')"> <img src="images/icons/eye.svg"
                      alt="show password"> </button>
             </div>

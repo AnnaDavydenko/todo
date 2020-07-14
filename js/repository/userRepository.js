@@ -14,14 +14,16 @@ class UserRepository {
    update(user) {
       let existingUser = this.usersData.find(item => item.id === user.id); // object
       if (existingUser) {
-         // existingUser{id: user.id, ...
+         existingUser = user;  
+         // или existingUser = {id: existingUser.id, ...user}
       }
       this.commit();
    }
 
    deleteUser(id) {
-      const existingUser = this.usersData.find(item => item.id === user.id); // object
+      const existingUserIndex = this.usersData.findIndex(item => item.id === user.id); // object
       if (existingUser) {
+         this.usersData.splice(existingUserIndex, 1);
          // удалить из массива юзеров по айди
       }
       this.commit();

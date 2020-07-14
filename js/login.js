@@ -37,8 +37,8 @@ function submitRegistrarion() {
    if (!isEmailValid || !isPasswordValid) {
       showErrorMassage();
    } else {
-      let user = new User(userData); // {id:123, password:123}
-      let userService = new UserService();
+      const user = new User(userData); // {id:123, password:123}
+      const userService = new UserService();
       userService.create(user);
       window.location.href = window.location.origin + '/loginForm.html';
    }

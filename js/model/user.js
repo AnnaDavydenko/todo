@@ -1,10 +1,10 @@
 class User {
-   constructor(options){
+   constructor(user){
       this.id = generateUniqueId();
-      this.name = options.name;
-      this.surname = options.surname;
-      this.email = options.email;
-      this.password = options.password;
-      this.userRole = options.userRole;
+      this.name = user.name;
+      this.surname = user.surname;
+      this.email = user.email;
+      this.password = user.password;
+      this.userRole = user.userRole;
    }
 }

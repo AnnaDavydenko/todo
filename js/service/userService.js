@@ -12,8 +12,8 @@ class UserService {
       this.repository.update(user);
    }
 
-   deleteUser(id) {
-      this.repository.deleteUser(user.id);
+   remove(id) {
+      this.repository.remove(user.id);
    }
 
 }

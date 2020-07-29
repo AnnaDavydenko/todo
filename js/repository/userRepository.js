@@ -20,7 +20,7 @@ class UserRepository {
       this.commit();
    }
 
-   deleteUser(id) {
+   remove(id) {
       const existingUserIndex = this.usersData.findIndex(item => item.id === user.id); // object
       if (existingUser) {
          this.usersData.splice(existingUserIndex, 1);

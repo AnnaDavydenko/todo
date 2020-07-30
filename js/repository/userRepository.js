@@ -12,7 +12,7 @@ class UserRepository {
    }
 
    update(user) {
-      let existingUser = this.usersData.find(item => item.id === user.id); // object
+      let existingUser = this.usersData.find(userItem => userItem.id === user.id); // object
       if (existingUser) {
          existingUser = user;  
          // или existingUser = {id: existingUser.id, ...user}
@@ -21,7 +21,7 @@ class UserRepository {
    }
 
    remove(id) {
-      const existingUserIndex = this.usersData.findIndex(item => item.id === user.id); // object
+      const existingUserIndex = this.usersData.findIndex(userItem => userItem.id === id); // object
       if (existingUser) {
          this.usersData.splice(existingUserIndex, 1);
          // удалить из массива юзеров по айди

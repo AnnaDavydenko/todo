@@ -13,7 +13,7 @@ class UserService {
    }
 
    remove(id) {
-      this.repository.remove(user.id);
+      this.repository.remove(id);
    }
 
 }

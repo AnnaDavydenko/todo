@@ -99,65 +99,6 @@ body {
   color: #3e403f;
 }
 
-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 10px;
-  margin: 5px;
-}
-
-header h1 {
-  letter-spacing: 0.06em;
-  height: 100%;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
-header .rightBlock {
-  width: 40%;
-  height: 45px;
-  padding: 0 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
-}
-
-header .rightBlock .email {
-  font-size: 16px;
-}
-
-header .rightBlock .rightIcons {
-  height: 0px;
-}
-
-header .rightBlock .rightIcons .userIconButton {
-  height: 24px;
-  width: 24px;
-  margin: 0 5px;
-  float: right;
-  background-color: transparent;
-}
-
-header .rightBlock .rightIcons .logOutButton {
-  height: 24px;
-  width: 24px;
-  margin: 0 5px;
-  float: right;
-  background-color: transparent;
-}
-
 section {
   display: -webkit-box;
   display: -ms-flexbox;

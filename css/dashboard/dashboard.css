@@ -1,0 +1,249 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+body {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#a8edea), to(#fed6e3));
+  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  font-size: 20px;
+  font-family: Raleway;
+  color: #3e403f;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px;
+  margin: 5px;
+  border-bottom: 1px solid #3e403f;
+}
+
+header h1 {
+  letter-spacing: 0.06em;
+  height: 100%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+header .rightBlock {
+  width: 40%;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+header .rightBlock .email {
+  font-size: 16px;
+}
+
+header .rightBlock .rightIcons {
+  height: 0px;
+}
+
+header .rightBlock .rightIcons .userIconButton {
+  height: 24px;
+  width: 24px;
+  margin: 0 5px;
+  float: right;
+  background-color: transparent;
+}
+
+header .rightBlock .rightIcons .logOutButton {
+  height: 24px;
+  width: 24px;
+  margin: 0 5px;
+  float: right;
+  background-color: transparent;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 10px;
+}
+
+main .userCard {
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(10%, #e3fdf5), color-stop(40%, #ffe6fa66));
+  background-image: linear-gradient(-360deg, #e3fdf5 10%, #ffe6fa66 40%);
+  width: 45%;
+  border: 2px solid #e3fdf5;
+  border-radius: 15px;
+  -webkit-box-shadow: inset 2px -1px 9px 4px #e9fdf9;
+          box-shadow: inset 2px -1px 9px 4px #e9fdf9;
+  padding: 21px;
+}
+
+main .userCard .topSubsection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .userCard .topSubsection p {
+  padding: 5px;
+  text-align: left;
+  font-size: 16px;
+  margin: 5px 0;
+  color: #3e403f;
+  letter-spacing: 0.06em;
+}
+
+main .userCard .topSubsection .buttonAddTask {
+  height: 24px;
+  width: 24px;
+  margin: 8px 0;
+  background-color: transparent;
+}
+
+main .userCard .task {
+  font-size: 13px;
+  border: 2px solid #e4878729;
+  border-radius: 5px;
+  width: 100%;
+  margin: 5px 0 20px 0;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .userCard .task .textTask {
+  padding: 15px;
+}
+
+main .userCard .task .editRemoveContainer .buttonEditTask {
+  height: 24px;
+  width: 24px;
+  margin: 8px 0;
+  background-color: transparent;
+}
+
+main .userCard .task .editRemoveContainer .buttonRemoveTask {
+  height: 24px;
+  width: 24px;
+  margin: 8px 0;
+  background-color: transparent;
+}
+
+main .userCard .task2 {
+  font-size: 13px;
+}
+
+main .userCard .task3 {
+  font-size: 13px;
+}
+/*# sourceMappingURL=dashboard.css.map */

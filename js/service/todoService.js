@@ -26,7 +26,7 @@ class TodoService {
     
     return usersArr.map(function(userItem) {
       userItem.todo =  this.todoRepository.getUserTodos()
-    }
+    });
 
     
     // вытщить массив всех юзеров, пройтись, для каждого вставить его тудушки

@@ -5,7 +5,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Admin's dashboard</title>
-   <link rel="stylesheet" href="/css/loginForm/loginForm.css">
+   <link rel="stylesheet" href="/css/dashboard/dashboard.css">
    <link rel="stylesheet" href="/css/fonts.css">
 </head>
 
@@ -27,13 +27,44 @@
 
       </div>
    </header>
-   <section>
 
-   </section>
+   <main>
+
+
+      <ul id="userCards"></ul>
+
+      <div class="userCardTemplate userCard">
+         <div class="topSubsection">
+            <p id="userCardTitle"></p>
+            <button class="buttonAddTask">
+               <img src="/images/icons/addTask.svg" alt="add task">
+            </button>
+         </div>
+         <ul id="userTasks"></ul>
+      </div>
+
+      <div class="taskTemplate task">
+         <p id="taskTitle" class="textTask"></p> 
+         <div class="editRemoveContainer">
+            <button class="buttonEditTask">
+               <img src="/images/icons/edit.svg" alt="edit task">
+            </button>
+            <button class="buttonRemoveTask">
+               <img src="/images/icons/close1.svg" alt="remove task">
+            </button>
+         </div>
+      </div>
+
+      
+   </main>
 
 
    <!-- <script src="js/form.js"></script> -->
    <!-- <script src="js/validation.js"></script> -->
+   <script src="/js/service/userService.js"></script>
+   <script src="/js/service/todoService.js"></script>
+   <script src="/js/repository/userRepository.js"></script>
+   <script src="/js/repository/todoRepository.js"></script>
    <script src="/js/util/constants.js"></script>
    <script src="/js/pages/dashboard.js"></script>
 </body>

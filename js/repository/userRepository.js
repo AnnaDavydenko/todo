@@ -30,19 +30,19 @@ class UserRepository {
    }
 
    getUserByEmail(email) {
-      return this.usersData.map(userItem => userItem.email === email);
+      return this.usersData.find(userItem => userItem.email === email);
    }
 
    getUsers() {
       return this.usersData.map(function(userItem) {
          return {
             id: userItem.id,
-            name = userItem.name,
-            surname = userItem.surname,
-            email = userItem.email,
-            userRole = userItem.userRole,
+            name: userItem.name,
+            surname: userItem.surname,
+            email: userItem.email,
+            userRole: userItem.userRole,
          }
-      } 
+      }) 
       // вернуть массив всех юзеров без паролей
    };
 

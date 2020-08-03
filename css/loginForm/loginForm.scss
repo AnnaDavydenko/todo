@@ -9,56 +9,6 @@ body {
    color: #3e403f;
 }
 
-header {
-   display: flex;
-   justify-content: space-between;
-   padding: 10px;
-   margin: 5px;
-
-   h1 {
-      letter-spacing: 0.06em;
-      height: 100%;
-      align-self: center;
-   }
-
-   .rightBlock {
-
-      width: 40%;
-      height: 45px;
-      padding: 0 15px;
-      display: flex;
-      justify-content: space-evenly;
-      flex-direction: column-reverse;
-      
-      
-      .email {
-
-         font-size: 16px;
-        
-      }
-      .rightIcons{
-        // width: calc(100% - 48px);
-         height: 0px;
-
-               .userIconButton {
-         height: 24px;
-         width: 24px;
-         margin: 0 5px;
-         float: right;
-         background-color: transparent;
-      }
-      .logOutButton {
-         height: 24px;
-         width: 24px;
-         margin: 0 5px;
-         float: right;
-         background-color: transparent;
-      }
-      }
-
-   }
-}
-
 section {
    display: flex;
    flex-direction: column;

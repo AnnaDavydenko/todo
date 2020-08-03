@@ -1,0 +1,143 @@
+@import "nullstyle.scss";
+
+body {
+  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  font-size: 20px;
+  font-family: Raleway;
+  color: #3e403f;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 5px;
+  border-bottom: 1px solid #3e403f;
+
+  h1 {
+    letter-spacing: 0.06em;
+    height: 100%;
+    align-self: center;
+  }
+
+  .rightBlock {
+
+    width: 40%;
+    height: 45px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column-reverse;
+
+
+    .email {
+
+      font-size: 16px;
+
+    }
+
+    .rightIcons {
+      // width: calc(100% - 48px);
+      height: 0px;
+
+      .userIconButton {
+        height: 24px;
+        width: 24px;
+        margin: 0 5px;
+        float: right;
+        background-color: transparent;
+      }
+
+      .logOutButton {
+        height: 24px;
+        width: 24px;
+        margin: 0 5px;
+        float: right;
+        background-color: transparent;
+      }
+    }
+
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px;
+  
+  .userCard {
+    background-image: linear-gradient(-360deg, #e3fdf5 10%, #ffe6fa66 40%);
+    width: 45%;
+    border: 2px solid #e3fdf5;
+    border-radius: 15px;
+    box-shadow: inset 2px -1px 9px 4px #e9fdf9;
+    padding: 21px;
+    
+    .topSubsection{
+      display: flex;
+      justify-content: space-between;
+      p {
+        padding: 5px;
+        text-align: left;
+        font-size: 16px;
+        margin: 5px 0;
+        color: #3e403f;
+        letter-spacing: 0.06em;
+
+      }
+  
+      .buttonAddTask{
+         height: 24px;
+         width: 24px;
+         margin: 8px 0;
+         background-color: transparent;
+       }
+    }
+    
+    
+
+    .task {
+      font-size: 13px;
+      border: 2px solid #e4878729;
+      border-radius: 5px;
+      width: 100%;
+      margin: 5px 0 20px 0;
+      height: 45px;
+      display: flex;
+      justify-content: space-between;
+
+      .textTask {
+        padding: 15px;
+      }
+
+      .editRemoveContainer {
+
+
+        .buttonEditTask {
+          height: 24px;
+          width: 24px;
+          margin: 8px 0;
+          background-color: transparent;
+        }
+        .buttonRemoveTask {
+          height: 24px;
+          width: 24px;
+          margin: 8px 0;
+          background-color: transparent;
+        }
+      }
+
+    }
+
+    .task2 {
+      font-size: 13px;
+    }
+    .task3 {
+      font-size: 13px;
+    }
+  }
+
+  
+}

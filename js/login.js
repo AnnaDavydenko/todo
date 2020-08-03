@@ -55,7 +55,8 @@ function submitLogin() {
    if (!isEmailValid || !isPasswordValid) {
       showErrorMassage();
    } else {
-      alert("uspeh");
+      localStorage.setItem("activeUserEmail", userData.email);
+      window.location.href = window.location.origin + '/views/dashboard.html';
    }
 
 }

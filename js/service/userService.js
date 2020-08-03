@@ -16,4 +16,7 @@ class UserService {
       this.repository.remove(id);
    }
 
+   getUserByEmail(email) {
+      this.repository.getUserByEmail(email);
+   }
 }

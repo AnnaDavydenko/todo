@@ -1,23 +1,35 @@
 class TodoService {
 
   constructor() {
-    this.repository = new TodoRepository();
+    this.todoRepository = new TodoRepository();
+    this.userRepository = new UserRepository();
   }
 
   create(todo) {
-    this.repository.create(todo);
+    this.todoRepository.create(todo);
   }
 
   update(todo) {
-    this.repository.update(todo);
+    this.todoRepository.update(todo);
   }
 
   remove(id) {
-    this.repository.remove(id);
+    this.todoRepository.remove(id);
   }
 
   getUserTodos(userId){    // сибирает таски юзерА
-    this.repository.getUserTodos(userId);
+    this.todoRepository.getUserTodos(userId);
   }
+
+  getUsersWithTodos() {
+    let usersArr = this.userRepository.getUsers();
+    
+    return usersArr.map(function(userItem) {
+      userItem.todo =  this.todoRepository.getUserTodos()
+    }
+
+    
+    // вытщить массив всех юзеров, пройтись, для каждого вставить его тудушки
+  };
 
 }

@@ -29,6 +29,23 @@ class UserRepository {
       this.commit();
    }
 
+   getUserByEmail(email) {
+      return this.usersData.map(userItem => userItem.email === email);
+   }
+
+   getUsers() {
+      return this.usersData.map(function(userItem) {
+         return {
+            id: userItem.id,
+            name = userItem.name,
+            surname = userItem.surname,
+            email = userItem.email,
+            userRole = userItem.userRole,
+         }
+      } 
+      // вернуть массив всех юзеров без паролей
+   };
+
    commit() {
       localStorage.setItem("users", JSON.stringify(this.usersData)); // кладем в локал сторидж всю новую юсер дату
    }

@@ -18,14 +18,20 @@ class TodoService {
   }
 
   getUserTodos(userId){    // сибирает таски юзерА
-    this.todoRepository.getUserTodos(userId);
+    return this.todoRepository.getUserTodos(userId);
+  }
+
+  getTaskById(id){
+    return this.todoRepository.getTaskById(id);
   }
 
   getUsersWithTodos() {
-    let usersArr = this.userRepository.getUsers();
+    const that = this;
+    const usersArr = this.userRepository.getUsers();
     
     return usersArr.map(function(userItem) {
-      userItem.todo =  this.todoRepository.getUserTodos()
+      userItem.todos = that.todoRepository.getUserTodos(userItem.id);
+      return userItem;
     });
 
     

@@ -17,6 +17,10 @@ class UserService {
    }
 
    getUserByEmail(email) {
-      this.repository.getUserByEmail(email);
+     return this.repository.getUserByEmail(email);
+   }
+
+   getUserById(id){
+     return this.repository.getUserById(id);   
    }
 }

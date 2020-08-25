@@ -134,7 +134,8 @@ header .rightBlock {
 }
 
 header .rightBlock .email {
-  font-size: 16px;
+  margin: 0 0 0px -20px;
+  font-size: 14px;
 }
 
 header .rightBlock .rightIcons {
@@ -155,6 +156,10 @@ header .rightBlock .rightIcons .logOutButton {
   margin: 0 5px;
   float: right;
   background-color: transparent;
+}
+
+#userCardTemplate, #taskTemplate {
+  display: none;
 }
 
 main {
@@ -179,6 +184,7 @@ main .userCard {
   -webkit-box-shadow: inset 2px -1px 9px 4px #e9fdf9;
           box-shadow: inset 2px -1px 9px 4px #e9fdf9;
   padding: 21px;
+  margin: 5px 20px 20px 10px;
 }
 
 main .userCard .topSubsection {
@@ -221,6 +227,10 @@ main .userCard .task {
           justify-content: space-between;
 }
 
+main .userCard .task input, main .userCard .task #updateTask {
+  display: none;
+}
+
 main .userCard .task .textTask {
   padding: 15px;
 }
@@ -237,6 +247,14 @@ main .userCard .task .editRemoveContainer .buttonRemoveTask {
   width: 24px;
   margin: 8px 0;
   background-color: transparent;
+}
+
+main .userCard .editTask p, main .userCard .editTask #editTask {
+  display: none;
+}
+
+main .userCard .editTask input, main .userCard .editTask #updateTask {
+  display: block;
 }
 
 main .userCard .task2 {

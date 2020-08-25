@@ -14,7 +14,7 @@ class UserRepository {
    update(user) {
       let existingUser = this.usersData.find(userItem => userItem.id === user.id); // object
       if (existingUser) {
-         existingUser = user;  
+         existingUser = user;
          // или existingUser = {id: existingUser.id, ...user}
       }
       this.commit();
@@ -33,8 +33,12 @@ class UserRepository {
       return this.usersData.find(userItem => userItem.email === email);
    }
 
+   getUserById(id) {
+      return this.usersData.find(userItem => userItem.id === id);
+   }
+
    getUsers() {
-      return this.usersData.map(function(userItem) {
+      return this.usersData.map(function (userItem) {
          return {
             id: userItem.id,
             name: userItem.name,
@@ -42,7 +46,7 @@ class UserRepository {
             email: userItem.email,
             userRole: userItem.userRole,
          }
-      }) 
+      })
       // вернуть массив всех юзеров без паролей
    };
 

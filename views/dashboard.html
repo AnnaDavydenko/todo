@@ -15,12 +15,12 @@
    <header>
       <h1>Todo's Application</h1>
       <div class="rightBlock">
-         <div class="email">@gmail.com</div>
+         <div class="email"></div>
          <div class="rightIcons">
             <button class="userIconButton" onclick="goToUserPage()">
                <img src="/images/icons/user.svg" alt="user icon">
             </button>
-            <button class="logOutButton" onclick="register()">
+            <button class="logOutButton" onclick="logout()">
                <img src="/images/icons/logout.svg" alt="logout icon">
             </button>
          </div>
@@ -33,38 +33,44 @@
 
       <ul id="userCards"></ul>
 
-      <div class="userCardTemplate userCard">
+      <div id="userCardTemplate" class="userCard">
          <div class="topSubsection">
             <p id="userCardTitle"></p>
-            <button class="buttonAddTask">
+            <button class="buttonAddTask" onclick="addTask(event)">
                <img src="/images/icons/addTask.svg" alt="add task">
             </button>
          </div>
          <ul id="userTasks"></ul>
       </div>
 
-      <div class="taskTemplate task">
-         <p id="taskTitle" class="textTask"></p> 
+      <div id="taskTemplate" class="task">
+         <p id="taskTitle" class="textTask"></p>
+         <input type="text">
          <div class="editRemoveContainer">
-            <button class="buttonEditTask">
+            <button id="updateTask" class="buttonEditTask" onclick="updateTask(event)">
+               <img src="/images/icons/edit.svg" alt="update task">
+            </button>
+            <button id="editTask" class="buttonEditTask" onclick="editTask(event)">
                <img src="/images/icons/edit.svg" alt="edit task">
             </button>
-            <button class="buttonRemoveTask">
+            <button class="buttonRemoveTask" onclick="removeTask(event)">
                <img src="/images/icons/close1.svg" alt="remove task">
             </button>
          </div>
       </div>
-
       
    </main>
 
 
    <!-- <script src="js/form.js"></script> -->
    <!-- <script src="js/validation.js"></script> -->
+
+   <script src="/js/model/todo.js"></script>
    <script src="/js/service/userService.js"></script>
    <script src="/js/service/todoService.js"></script>
    <script src="/js/repository/userRepository.js"></script>
    <script src="/js/repository/todoRepository.js"></script>
+   <script src="/js/util/common.js"></script>
    <script src="/js/util/constants.js"></script>
    <script src="/js/pages/dashboard.js"></script>
 </body>

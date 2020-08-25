@@ -21,14 +21,18 @@ class TodoRepository {
 
   remove(id) {
     const existingTodoIndex = this.todosData.findIndex(todoItem => todoItem.id === id); // object
-    if (existingTodo) {
+    if (existingTodoIndex >= 0) {
        this.todosData.splice(existingTodoIndex, 1);
     }
     this.commit();
   }
 
   getUserTodos(userId) {
-    return this.todosData.map(todoItem => todoItem.userId === userId);
+    return this.todosData.filter(todoItem => todoItem.userId === userId);
+  }
+
+  getTaskById(id){
+    return this.todosData.find(todoItem => todoItem.id === id);
   }
 
   commit() {

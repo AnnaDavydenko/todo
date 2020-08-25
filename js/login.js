@@ -37,22 +37,26 @@ function submitRegistrarion() {
    if (!isEmailValid || !isPasswordValid) {
       showErrorMassage();
    } else {
-      window.location.href = window.location.origin + '/todo/loginForm.html';
+      const user = new User(userData); // {id:123, password:123}
+      const userService = new UserService();
+      userService.create(user);
+      window.location.href = window.location.origin + '/loginForm.html';
    }
 }
 
 function register() {
-   window.location.href = window.location.origin + '/todo/registrationForm.html';
+   window.location.href = window.location.origin + '/registrationForm.html';
 }
 
-function submitLogin(){
+function submitLogin() {
    const userData = getFormFields("#loginForm");
    const isEmailValid = validateEmail(userData.email);
    const isPasswordValid = passwordMatchRegularExpression(userData.password);
    if (!isEmailValid || !isPasswordValid) {
       showErrorMassage();
    } else {
-      alert("uspeh");
+      localStorage.setItem("activeUserEmail", userData.email);
+      window.location.href = window.location.origin + '/views/dashboard.html';
    }
 
 }
